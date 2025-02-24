@@ -1,0 +1,107 @@
+.displaySpace {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: 160px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    top: 20px;
+    left: -140px;
+
+    .introLine {
+        color: #242E52;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .buttonSets {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: start;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 13px;
+        gap: 10px;
+
+        .signUpButton {
+            border-radius: 20px;
+            background-color: #BF6B21;
+            color: white;
+        }
+
+        .logInButton {
+            border-radius: 20px;
+            background-color: #DDD6C5;
+            color: #BF6B21;
+        }
+    }
+
+    .infoButton {
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px);
+        border: none;
+        padding: 10px;
+        justify-content: start;
+        color: #30395A;
+        border-radius: 0px;
+
+        &:hover,
+        &:focus {
+            background: #DDD6C5 !important;
+            color: #30395A !important;
+        }
+    }
+
+    .locationButton {
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px);
+        border: none;
+        padding: 10px;
+        justify-content: start;
+        color: #30395A;
+        border-radius: 0px;
+
+        &:hover,
+        &:focus {
+            background: #DDD6C5 !important;
+            color: #30395A !important;
+        }
+    }
+
+    .orderButton {
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px);
+        border: none;
+        padding: 10px;
+        justify-content: start;
+        color: #30395A;
+        border-radius: 0px;
+
+        &:hover,
+        &:focus {
+            background: #DDD6C5 !important;
+            color: #30395A !important;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -9px;
+        right: 20px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+    }
+}

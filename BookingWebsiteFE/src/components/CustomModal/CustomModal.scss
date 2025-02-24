@@ -1,0 +1,248 @@
+.bookingModal {
+    background-color: transparent;
+    padding: 0 !important;
+    padding: 0px 30px;
+    min-width: 500px;
+    top: 0px;
+
+    .custom-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 16px;
+        gap: 10px;
+        background: transparent;
+        position: absolute;
+        bottom: -20vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .footerButton {
+            display: flex;
+            text-wrap: wrap;
+            width: 30%;
+            height: 6vh;
+            border-radius: 40px;
+            border: none;
+
+            &:hover {
+                filter: brightness(1.2);
+                color: inherit;
+                border: none;
+            }
+
+        }
+    }
+}
+
+.bookingModal .ant-modal {
+    top: 5vh !important;
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal-blur .ant-modal-mask {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.bookingModal .ant-modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 50px;
+    overflow: visible;
+    margin: auto;
+}
+
+.bookingModal .ant-modal-body {
+    padding: 10px !important;
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    background-color: #F4F2EF;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.bookingModal .ant-modal-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 !important;
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-tabs .ant-tabs-nav-list {
+    width: 100%;
+    background: transparent !important;
+    /* Ensures no background */
+    box-shadow: none !important;
+    /* Removes any shadow */
+    border: none !important;
+    border-radius: 10px;
+}
+
+
+.custom-tabs .ant-tabs-nav {
+    display: flex;
+    width: 100%;
+    border-radius: 40px;
+    background: transparent !important;
+}
+
+.custom-tab-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.custom-tabs .ant-tabs-tab {
+    background-color: #CCCCCC;
+    color: #242E52;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+    background-color: #F4F2EF;
+}
+
+.custom-tabs {
+    width: 100%;
+    padding: 0 15px 15px;
+    display: flex;
+    border-radius: 50px;
+    overflow: visible;
+
+    .contentSpace {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        .addressInput {
+            border-color: #242E52;
+            height: 6vh;
+        }
+
+        .buttonGroup {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            flex-wrap: wrap;
+
+            .getLocationButton {
+                display: flex;
+                width: 48%;
+                border-radius: 50px;
+                height: 6vh;
+
+                &:hover {
+                    filter: brightness(1.1);
+                    color: inherit;
+                    border-color: inherit;
+                }
+            }
+
+            .chooseLocationButton {
+                display: flex;
+                width: 48%;
+                border-radius: 50px;
+                height: 6vh;
+
+                &:hover {
+                    filter: brightness(1.1);
+                    color: inherit;
+                    border-color: inherit;
+                }
+            }
+        }
+
+        .map-container {
+            display: block;
+            height: 300px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .radio-wrapper {
+            display: block;
+            height: 300px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow-y: scroll;
+
+            .custom-radio-group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .ant-radio-wrapper-checked {
+                    background-color: #e6f7ff;
+                }
+
+                .ant-radio-inner {
+                    border-color: transparent;
+                    width: 24px !important;
+                    height: 24px !important;
+                }
+
+                .ant-radio-inner::after {
+                    width: 12px !important;
+                    height: 12px !important;
+                    top: 85%;
+                    left: 85%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .ant-radio-wrapper-checked {
+                    border-color: #DDD6C5 !important;
+                    background-color: #DDD6C5 !important;
+                }
+
+                .ant-radio-checked .ant-radio-inner {
+                    background-color: white !important;
+
+                }
+
+                .ant-radio-checked .ant-radio-inner::after {
+                    background-color: #242E52 !important;
+                }
+
+
+
+                .custom-radio {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 100%;
+                    height: 9vh;
+                    padding: 12px;
+                    background-color: white;
+                    cursor: pointer;
+                    color: #242E52;
+
+                }
+
+            }
+        }
+    }
+}

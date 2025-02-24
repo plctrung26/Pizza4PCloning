@@ -1,0 +1,31 @@
+.carousel-container {
+    width: 73%;
+    margin: auto;
+    position: relative;
+
+    .carousel-space {
+
+        .carousel-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 40px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+
+        .slick-current .carousel-slide {
+            transform: scale(1);
+        }
+    }
+}
