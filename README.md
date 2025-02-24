@@ -24,8 +24,8 @@ This project is a **frontend clone** of the **Pizza 4P’s Delivery** website, r
 ## 📦 Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/YOUR_USERNAME/pizza4p-clone.git
-   cd pizza4p-clone
+   git clone https://github.com/plctrung26/Pizza4PCloning.git
+   cd BookingWebsiteFE
    ```
 2. Install dependencies:
    ```sh
@@ -33,7 +33,7 @@ This project is a **frontend clone** of the **Pizza 4P’s Delivery** website, r
    ```
 3. Start the development server:
    ```sh
-   npm start  # or yarn start
+   npm run dev  # or yarn start
    ```
 4. Open `http://localhost:5173` in your browser.
 
