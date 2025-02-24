@@ -38,7 +38,8 @@ This project is a **frontend clone** of the **Pizza 4P’s Delivery** website, r
 4. Open `http://localhost:5173` in your browser.
 
 ## 📸 Screenshots
-(Add screenshots of your project here for better visualization)
+![image](https://github.com/user-attachments/assets/a678ffe5-091d-4ebe-b012-2d32b3a063d0)
+
 
 ## 📝 Roadmap / Future Improvements
 - ✅ Improve responsiveness for all screen sizes *(Currently fixing responsiveness issues.)*
