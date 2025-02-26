@@ -71,8 +71,28 @@
             flex-direction: row;
             padding-bottom: 2px;
             justify-content: space-between;
-            overflow-x: scroll;
+            overflow-x: auto;
             gap: 10px;
+            scrollbar-width: thin;
+
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &:hover {
+                scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+            }
 
             .menuCard {
                 width: 9%;
@@ -130,8 +150,28 @@
             flex-direction: row;
             width: 100%;
             justify-content: space-between;
-            overflow-x: scroll;
+            overflow-x: auto;
             gap: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &:hover {
+                scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+            }
 
             .cardSpace {
                 min-width: 192px;
@@ -190,6 +230,8 @@
     .page-content .rating {
         max-width: 95% !important;
     }
+
+
 
 }
 
