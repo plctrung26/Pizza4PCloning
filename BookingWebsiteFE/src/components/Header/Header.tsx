@@ -1,4 +1,4 @@
-import { GlobalOutlined, SearchOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
+import { CarOutlined, CarryOutOutlined, ClockCircleOutlined, EnvironmentOutlined, FormOutlined, GiftOutlined, GlobalOutlined, InteractionOutlined, MenuOutlined, PhoneOutlined, SearchOutlined, ShoppingCartOutlined, SmileOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Input } from 'antd';
 import { Dropdown } from 'antd';
 import './Header.scss'
@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
     const [isVisible, setIsVisible] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [userOpen, setUserOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,7 +45,7 @@ const Header = () => {
                             className='searchBar'
                         />
                     </div>
-                    <div className='headerUtils'>
+                    <nav className='headerUtils'>
                         <div className='headerUser'>
                             <Dropdown
                                 dropdownRender={() => (<UserDropDown />)}
@@ -68,9 +70,42 @@ const Header = () => {
                         <div className='headerCartIcon'>
                             <ShoppingCartOutlined className='cartIcon' />
                         </div>
+                    </nav>
+                    <Button
+                        className='menu-button'
+                        icon={<MenuOutlined />}
+                        onClick={() => {
+                            setMenuOpen(!menuOpen)
+                        }}
+                    />
+                    <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+                        <Button
+                            icon={<UserOutlined />}
+                            className='hidden-menu-button'
+                            onClick={() => { setUserOpen(!userOpen) }}
+                        >
+                            User
+                        </Button>
+                        <div className={`user-menu-hidden ${userOpen ? "active" : ""}`}>
+                            <Button className='user-button' icon={<FormOutlined />}>Register</Button>
+                            <Button className='user-button' icon={<CarryOutOutlined />}>Login</Button>
+                            <Button className='user-button' icon={<SmileOutlined />}>Personal Information</Button>
+                            <Button className='user-button' icon={<EnvironmentOutlined />}>My Locations</Button>
+                            <Button className='user-button' icon={<ClockCircleOutlined />}>Order History</Button>
+                        </div>
+                        <Button
+                            icon={<GlobalOutlined />}
+                            className='hidden-menu-button'
+                        >English
+                        </Button>
+                        <Button icon={<ShoppingCartOutlined />} className='hidden-menu-button'>Shopping Cart</Button>
+                        <Button icon={<GiftOutlined />} className='hidden-menu-button'>Voucher</Button>
+                        <Button icon={<CarOutlined />} className='hidden-menu-button'>Shipping</Button>
+                        <Button icon={<InteractionOutlined />} className='hidden-menu-button'>Refund</Button>
+                        <Button icon={<PhoneOutlined />} className='hidden-menu-button'>Hotline</Button>
                     </div>
                 </div>
-            </div>
+            </div >
             <div className='spacer'></div>
             <div className={isVisible ? "headerUtility" : "hidden"}>
                 <div className='headerUtilityContainer'>

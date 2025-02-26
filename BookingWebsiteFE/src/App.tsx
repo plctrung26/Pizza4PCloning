@@ -37,18 +37,18 @@ function App() {
             <MenuCard className="menu-item"></MenuCard>
             <MenuCard className="menu-item"></MenuCard>
           </div>
-          <div className="popular">
-            <div className='title-wrapper' >
-              <div className="title">Popular</div>
-              <div className="view-all">View All</div>
-            </div>
-            <div className="popular-card">
-              <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti" recommendation="Must-try"></FoodCard>
-              <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti"></FoodCard>
-              <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti" ></FoodCard>
-              <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti"></FoodCard>
-              <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti"></FoodCard>
-            </div>
+        </div>
+        <div className="popular">
+          <div className='title-wrapper' >
+            <div className="title">Popular</div>
+            <div className="view-all">View All</div>
+          </div>
+          <div className="popular-card">
+            <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti" recommendation="Must-try"></FoodCard>
+            <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti"></FoodCard>
+            <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti" ></FoodCard>
+            <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti"></FoodCard>
+            <FoodCard srcImg="crab_noodle.webp" cardName="Crab Tomato Cream Spaghetti"></FoodCard>
           </div>
         </div>
         <div className="rating">

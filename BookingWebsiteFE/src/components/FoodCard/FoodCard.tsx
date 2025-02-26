@@ -19,7 +19,6 @@ const FoodCard: React.FC<FoodCardProps> = ({
     srcImg = 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
     cardName = 'Example Name',
     cardPrize = 100000,
-    className = ''
 }) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,7 +36,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
     };
 
     return (
-        <div className={`cardSpace ${className}`}>
+        <div className={'cardSpace'}>
             <div className="cardRecommendation">
                 {recommendation}
             </div>

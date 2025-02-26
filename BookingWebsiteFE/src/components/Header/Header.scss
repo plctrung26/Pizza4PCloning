@@ -15,6 +15,7 @@ html {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     z-index: 1000;
+    box-sizing: border-box;
 
     .headerContainer {
         display: flex;
@@ -23,10 +24,13 @@ html {
         padding-bottom: 8px;
         justify-content: space-between;
         align-items: center;
-        max-width: 1200px;
+        max-width: 80vw;
         width: 100%;
-        margin: 0 auto;
         padding: 0 16px;
+
+        @media (max-width: 1360px) {
+            max-width: 90%;
+        }
 
         .headerLogo {
             font-size: 33px;
@@ -119,11 +123,89 @@ html {
             }
 
         }
+
+        .menu-button {
+            display: none;
+            position: relative;
+            z-index: 2000;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 1000px) {
+            .headerSearchBar {
+                display: none;
+            }
+
+            .headerUtils {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                width: 350px;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                background-color: #242E52;
+                top: 51px;
+                right: 0;
+                border-radius: 10px 0px 0px 10px;
+                overflow: hidden;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+                .hidden-menu-button {
+                    display: flex;
+                    width: 100%;
+                    border-radius: 0;
+                    color: #242E52;
+                    background-color: white;
+                    height: 50px;
+                    flex-grow: 1;
+                    justify-content: start;
+                    border-color: transparent;
+                }
+
+                .user-menu-hidden {
+                    display: none;
+                }
+
+                .user-menu-hidden.active {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .user-button {
+                        display: flex;
+                        width: 100%;
+                        border-radius: 0;
+                        color: #242E52;
+                        background-color: #F5F5F5;
+                        height: 100%;
+                        flex-grow: 1;
+                        justify-content: center;
+                        padding-left: 40px;
+                        border-color: transparent;
+                        height: 50px;
+                    }
+                }
+            }
+
+        }
     }
 }
 
 .spacer {
     height: 64px;
+    width: 100%;
 }
 
 .headerUtility {
@@ -133,10 +215,10 @@ html {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
-    opacity: 1;
+    overflow: hidden;
 
     .headerUtilityContainer {
-        max-width: 1200px;
+        max-width: 80vw;
         width: 100%;
         display: flex;
         gap: 40px;
@@ -164,8 +246,12 @@ html {
             }
         }
     }
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
 
 .hidden {
-    opacity: 0;
+    display: none;
 }
