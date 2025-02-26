@@ -121,7 +121,7 @@ const CustomModal: React.FC<ModalProps> = (props) => {
                             }}
                             className="getLocationButton"
                         >
-                            Use Current Location
+                            Current Location
                         </Button>
                         <Button icon={<EnvironmentOutlined />}
                             className="chooseLocationButton"

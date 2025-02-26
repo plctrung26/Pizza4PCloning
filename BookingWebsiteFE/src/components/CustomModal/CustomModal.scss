@@ -5,6 +5,14 @@
     min-width: 500px;
     top: 0px;
 
+    @media (max-width: 500px) {
+        min-width: 100%;
+
+        .ant-modal-content {
+            padding: 0;
+        }
+    }
+
     .custom-footer {
         display: flex;
         justify-content: flex-end;
@@ -18,13 +26,21 @@
         align-items: center;
         flex-direction: column;
 
+        @media (max-height:718px) {
+            right: -400px;
+            bottom: 200px;
+        }
+
         .footerButton {
             display: flex;
             text-wrap: wrap;
-            width: 30%;
+            width: 60%;
             height: 6vh;
+            min-height: 50px;
             border-radius: 40px;
             border: none;
+
+
 
             &:hover {
                 filter: brightness(1.2);
@@ -141,6 +157,7 @@
         .addressInput {
             border-color: #242E52;
             height: 6vh;
+            min-height: 50px;
         }
 
         .buttonGroup {
@@ -155,6 +172,7 @@
                 width: 48%;
                 border-radius: 50px;
                 height: 6vh;
+                min-height: 50px;
 
                 &:hover {
                     filter: brightness(1.1);
@@ -168,6 +186,7 @@
                 width: 48%;
                 border-radius: 50px;
                 height: 6vh;
+                min-height: 50px;
 
                 &:hover {
                     filter: brightness(1.1);

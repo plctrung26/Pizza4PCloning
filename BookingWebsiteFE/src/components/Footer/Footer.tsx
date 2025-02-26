@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="below-header">
+            <div className="below-footer">
                 <div className="copyright">
                     Copyright © 2025 Pizza 4P’s. All Rights Reserved
                 </div>
