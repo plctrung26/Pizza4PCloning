@@ -4,6 +4,7 @@ import { Dropdown } from 'antd';
 import './Header.scss'
 import UserDropDown from './UserDropDown';
 import { useEffect, useState } from 'react';
+import { Outlet } from "react-router";
 
 const Header = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -118,6 +119,7 @@ const Header = () => {
                     </span>
                 </div>
             </div>
+            <Outlet />
         </>
 
     )
