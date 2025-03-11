@@ -51,7 +51,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
                     <div className="pizzaTypeSpace">
                         <Button
                             icon={<img
-                                src="/public/halfPizzaIcon.webp"
+                                src="halfPizzaIcon.webp"
                                 className="halfPizzaImg"
                             />}
                             className="pizzaButton"

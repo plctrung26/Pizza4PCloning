@@ -1,4 +1,3 @@
-import React from "react"
 import AddressBar from "../components/AddressBar/AddressBar"
 import CustomCarousel from "../components/CustomCarousel/CustomCarousel"
 import FoodCard from "../components/FoodCard/FoodCard"
@@ -6,8 +5,10 @@ import MenuCard from "../components/MenuCard/MenuCard"
 import RatingComponent from "../components/RatingComponent/RatingComponent"
 import '../static/HomePage.scss'
 
+console.log("App component rendered");
 
-const App = React.memo(() => {
+const App = () => {
+  console.log("App rendered");
   return (
     <div className="page-content">
       <div className="intro">
@@ -64,6 +65,6 @@ const App = React.memo(() => {
       </div>
     </div>
   )
-});
+};
 
 export default App

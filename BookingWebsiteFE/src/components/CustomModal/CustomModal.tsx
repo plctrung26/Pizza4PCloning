@@ -23,13 +23,18 @@ const CustomModal: React.FC<ModalProps> = (props) => {
 
     const ResizeMap = () => {
         const map = useMap();
+
         useEffect(() => {
-            setTimeout(() => {
-                map.invalidateSize();
-            }, 300); // Delay to ensure modal animation finishes
+            if (map) {
+                setTimeout(() => {
+                    map.invalidateSize();
+                }, 300); // Delay to ensure modal animation finishes
+            }
         }, [map]);
+
         return null;
     };
+
 
     const customMarker = new L.Icon({
         iconUrl: markerIcon,
@@ -38,18 +43,26 @@ const CustomModal: React.FC<ModalProps> = (props) => {
         iconAnchor: [12, 41],
     });
 
-    function MapClickHandler() {
-        useMapEvents({
+    const MapClickHandler = () => {
+        const map = useMapEvents({
             click(e) {
                 setLocation(e.latlng);
             },
         });
+
         return null;
-    }
+    };
+
 
     const MapUpdater = ({ position }: { position: LatLngExpression }) => {
         const map = useMap();
-        map.flyTo(position, 13, { animate: true });
+
+        useEffect(() => {
+            if (map) {
+                map.flyTo(position, 13, { animate: true });
+            }
+        }, [map, position]);
+
         return null;
     };
 
